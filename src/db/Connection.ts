@@ -1,7 +1,8 @@
-import { mysql } from "mysql"
+// does this work?
+import  mysql from "mysql";
 import { Conn } from "../config/db.config"
 
-function createRawConnection() {
+export function createRawConnection() {
     const connection = mysql.createConnection(Conn)
     console.log("Connection to db...")
     connection.connect(function(err) {
